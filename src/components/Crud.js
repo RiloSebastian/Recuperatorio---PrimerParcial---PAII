@@ -4,6 +4,7 @@ import SelectTipos from "./SelectTipos";
 import FormularioCrud from "./FormularioCrud";
 import Spinner from "../components/Spinner";
 import Navegador from "./Navegador";
+import short from "short-uuid";
 
 const Crud = () => {
   const [mascotas, setmascota] = useState([]);
@@ -45,7 +46,7 @@ const Crud = () => {
 
   const createMascota = (nuevaMascota) => {
     console.log(nuevaMascota);
-    nuevaMascota.id = Date.now();
+    nuevaMascota.id = short.generate();
     setflag(false);
     fetch(URL, {
       method: "POST",

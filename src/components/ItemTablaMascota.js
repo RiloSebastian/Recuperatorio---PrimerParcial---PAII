@@ -23,7 +23,7 @@ const ItemTablaMascota = ({ mascota, setmascotaEdit, deleteMascota }) => {
       <td>
         <div className="btn-group">
           <Link to={`/mascotas/${id}`}>
-            <button className="btn btn-primary" onClick={handleEdit}>
+            <button className="btn btn-primary">
               Detalles
             </button>
           </Link>

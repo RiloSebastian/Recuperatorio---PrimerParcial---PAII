@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
+import { Link } from "react-router-dom";
 
 const Tipo = () => {
   const { descripcion } = useParams();
@@ -28,14 +29,35 @@ const Tipo = () => {
     getMascotas(URL);
   }, []);
 
+  const renderResults = () => {
+    return mascotas.length ? (
+      mascotas.map((mascota) => <Card key={mascota.id} mascota={mascota} />)
+    ) : (
+      <h1>No hay resultados</h1>
+    );
+  };
+
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+      }}
+    >
       {flag ? (
-        mascotas.map((mascota) => <Card key={mascota.id} mascota={mascota} />)
+        <>
+          {renderResults()}
+          <Link to={`/`}>
+            <button type="button" className="btn btn-primary" style={{margin: "50px", width: "300px", height:"60px"}}>Volver A Menu Principal</button>
+          </Link>{" "}
+        </>
       ) : (
         <Spinner />
       )}
-    </>
+    </div>
   );
 };
 

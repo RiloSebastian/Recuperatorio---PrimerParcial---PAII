@@ -25,7 +25,7 @@
     {
       "id": 1,
       "nombre": "Bobby",
-      "edad": 9,
+      "edad": 12,
       "tipo": "Perro",
       "vacunado": true,
       "observaciones": "Bobby se porta muy bien esta contento siempre"
@@ -53,6 +53,14 @@
       "tipo": "Perro",
       "vacunado": true,
       "observaciones": "Mea por todos lados"
+    },
+    {
+      "id": "3Q36gE6d2xs1y4SfSdELMJ",
+      "nombre": "algo",
+      "edad": 4,
+      "observaciones": "algo es un nombre muy raro para un pez muy aburrido",
+      "tipo": "Pez",
+      "vacunado": true
     }
   ]
 }

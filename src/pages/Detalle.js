@@ -21,7 +21,7 @@ const Detalle = () => {
     };
 
     getMascotas(URL);
-  });
+  },[]);
   
   return (
     <>
